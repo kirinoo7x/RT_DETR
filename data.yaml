@@ -1,0 +1,9 @@
+# YOLO format dataset configuration for RT-DETR
+
+path: dataset_yolo  # dataset root dir
+train: images/train  # train images (relative to 'path')
+val: images/val  # val images (relative to 'path')
+
+# Classes
+names:
+  0: object  # Change this to your actual class name
