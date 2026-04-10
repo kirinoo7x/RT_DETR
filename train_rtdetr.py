@@ -22,7 +22,7 @@ def train_model():
     # Note: CPU training is slow. Consider reducing epochs or batch size for faster testing.
     results = model.train(
         data='data.yaml',
-        epochs=50,  # Reduced for CPU training (was 100)
+        epochs=10,  # Quick test with 10 epochs
         imgsz=640,
         batch=4,  # Reduced batch size for CPU (was 8)
         device=device,
@@ -32,6 +32,7 @@ def train_model():
         save=True,
         plots=True,
         workers=4,  # Number of dataloader workers
+        fraction=0.05,  # Use only 5% of the data for training and validation
     )
 
     return results
